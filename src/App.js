@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+
 
 function App() {
+  const post = {
+    idCidade: 1,
+    name: 'Joinville',
+    state: 'SC',
+    country: 'Brasil',
+    data: {
+      temperature: 20,
+      humity: 89,
+      condition: 'Céu limpo',
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Climatempo</h1>
+      <p>
+        {post.name} - {post.state} - {post.country}
+        <br/>
+        Temperatura: {post.data.temperature} °C
+        <br/>
+        Humidade: {post.data.humity}%
+        <br/>
+        Condição: {post.data.condition}
+      
+      </p>
+      
+    
+    </>
   );
 }
 
